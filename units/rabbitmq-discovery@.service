@@ -1,6 +1,7 @@
 [Unit]
 Description=RabbitMQ Discovery
-BindsTo=rabbitmq.2.service
+BindsTo=rabbitmq@%i.service
+After=rabbitmq@%i.service
 
 [Service]
 TimeoutStartSec=0
@@ -12,4 +13,4 @@ Restart=always
 RestartSec=7
 
 [X-Fleet]
-X-ConditionMachineOf=rabbitmq.2.service
+MachineOf=rabbitmq@%i.service

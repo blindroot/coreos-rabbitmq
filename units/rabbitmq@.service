@@ -13,4 +13,4 @@ Restart=always
 RestartSec=7
 
 [X-Fleet]
-X-Conflicts=rabbitmq.*.service
+X-Conflicts=rabbitmq@*.service
